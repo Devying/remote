@@ -13,6 +13,7 @@ $name = Ap_Common_Htmlpurifier::stylePurifier($_POST['name']);
             $this->assign( 'msg', "请填写好必填信息!");
             return;
         }
+        $a="this is the first add a new line by huangbaoying@oasgames.com";
         $user_info=array();
         $_SESSION['name']=$name;
         $user_info['credentials_num']=$credentials_num;
