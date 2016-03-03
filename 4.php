@@ -18,7 +18,7 @@ $msg = new AMQPMessage($data,
 $channel->basic_publish($msg, '', 'task_queue');
 
 echo " [x] Sent ", $data, "\n";
-
+echo "你好";
 $channel->close();
 $connection->close();
 

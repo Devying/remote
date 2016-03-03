@@ -30,6 +30,7 @@ var_dump($cursor);
 //查找一条
 $user = $collection->findOne(array('name' => 'caleng'), array('email'));
 var_dump($user);
+echo "这又是我加的一行";
 //关闭数据库
 $conn->close();
 ?>
