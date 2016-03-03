@@ -17,5 +17,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 	    $smarty = new Smarty_Adapter ( $app_path.'/smarty/template', $config->toArray());
 	    $dispatcher->setView ( $smarty );
 	}
+	echo "这是我在2016年3月3日14:41:58加的一行";
 }
 

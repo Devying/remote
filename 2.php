@@ -24,6 +24,7 @@ public function search($params) {
         // $query->where('0=1');
         return $dataProvider;
     }
+    echo "这是我在2016年3月3日14:42:21加的一行";
     $query->andFilterWhere(['naa.id' => $this->id, 'uid' => $this->uid, 'naa.size' => $this->size, 'naa.type' => $this->type, 'indent' => $this->indent, 'status' => $this->status, 'update_time' => $this->update_time, 'create_time' => $this->create_time, ]);
     $query->andFilterWhere(['like', 'img_id', $this->img_id])->andFilterWhere(['like', 'naa.name', $this->name])->andFilterWhere(['like', 'address', $this->address])->andFilterWhere(['like', 's_address', $this->s_address])->andFilterWhere(['like', 'describe', $this->describe]);
     return $dataProvider;

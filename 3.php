@@ -13,6 +13,7 @@ $conn = new Mongo("mongodb://{$username}:{$password}@localhost/blog");
 //多个服务器
 $conn = new Mongo("mongodb://localhost:27017,localhost:27018");
 //选择数据库blog
+echo "这是我再2016年3月3日14:41:16加的一样";
 $db = $conn->blog;
 //制定结果集（表名：users）
 $collection = $db->users;
