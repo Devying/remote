@@ -20,6 +20,7 @@ $collection = $db->users;
 //新增
 $user = array('name' => 'caleng', 'email' => 'admin#admin.com');
 $collection->insert($user);
+echo "这是我添加2016年3月3日15:01:52的一行 the third commit";
 //修改
 $newdata = array('$set' => array("email" => "test@test.com"));
 $collection->update(array("name" => "caleng"), $newdata);
