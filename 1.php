@@ -9,7 +9,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 		$dispatcher->registerPlugin($tms);
 		
 	}
-	
+	$a="这是我新加的而一行";
 	public function _initSmarty(Yaf_Dispatcher $dispatcher) {
 	    
 	    $app_path = APP_PATH.'/app/'.MODULE;
