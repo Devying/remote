@@ -80,7 +80,7 @@ class CampuslistAction extends Ap_Base_Action
             $this->_view->assign('data', $campusData);
         }
         $count = $campusData['count'];
-
+	$name ="this is add new line in  by huangbaoying@oasgames.com";
 
         $pageHtml = Ap_Pager::default_pager_shorturl( $count, $pageSize, $page , '/activity/campuslist/page');
         $this->assign('pageHtml', $pageHtml);
