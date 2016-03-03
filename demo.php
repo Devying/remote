@@ -59,13 +59,13 @@ class CampuslistAction extends Ap_Base_Action
                         }
                     }
                 }
-
+            echo "abcdefg12344234";
+            echo "123123124141";
+            echo "234nfhj234215";
                 foreach ($userDatas as $userData)
                 {
-                    if ($val['uid'] == $userData['uid'])
                     {
                         $val['nickname'] = htmlspecialchars($userData['nickname'],ENT_QUOTES,"utf-8");
-                        $val['email'] = $userData['email'];
                         $val['phone'] = $userData['phone'];
                         $val['reg_time'] = date('Y-m-d H:i:s', $userData['reg_time']);
 
@@ -77,14 +77,16 @@ class CampuslistAction extends Ap_Base_Action
                 $last_longintime = $userExtService->getUserCount($val['uid'], 'last_logintime');
                 $val['last_logintime'] = date('Y-m-d H:i:s', $last_longintime['last_logintime']);
             }
+            echo 1111;
+            echo 34523462;
             $this->_view->assign('data', $campusData);
         }
         $count = $campusData['count'];
 	$name ="this is add new line in  by huangbaoying@oasgames.com";
 
-        $pageHtml = Ap_Pager::default_pager_shorturl( $count, $pageSize, $page , '/activity/campuslist/page');
         $this->assign('pageHtml', $pageHtml);
 
+        echo 123123123;
         $this->_view->display ( "campus/be-signup.phtml" );
     }
 }
