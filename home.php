@@ -10,7 +10,6 @@ class AjaxsignupAction extends Ap_Base_Action
         $password = isset( $_POST['password'] ) ? md5("Mooc2013salt".$_POST['password']) : '';
 
         $school = $this->post('school', '');
-        $major = $this->post('major', '');
         $admission = $this->post('admission', '5');
         $telephone = $this->post('telephone', '');
         if (empty($school))
@@ -30,7 +29,7 @@ class AjaxsignupAction extends Ap_Base_Action
         {
             $this->displayJson('', 4, '手机号码不符合规则');
         }
-
+echo  "this jkj ";
         $registerService = new Ap_Common_RegisterService();
         $rawRegisterInfo = $registerService->register($nickname, $username, $password);
         $registerInfo = json_decode($rawRegisterInfo, true);
@@ -42,7 +41,8 @@ class AjaxsignupAction extends Ap_Base_Action
         );
 
         $newInfos = $userService->SetUserInfo ($uid, $userData ); // 设置注册信息
-
+        echo "this is my first list";
+        echo "111111";
         if (!$newInfos)
         {
             $this->displayJson('', 4, '注册信息不符合规则');
@@ -50,7 +50,6 @@ class AjaxsignupAction extends Ap_Base_Action
         $campusData = array(
             'uid' => $uid,
             'school' => $school,
-            'major' => $major,
             'admission' => $admission,
             'status' => 0
         );
