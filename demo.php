@@ -45,6 +45,7 @@ class CampuslistAction extends Ap_Base_Action
             $userDatas = $userService->GetUserInfos($userIds, $fields);
             //var_dump($userDatas);
             $userExtService = new Ap_Service_Data_UserExt();
+            echo 11111;
             foreach ($campusData['data'] as &$val)
             {
                 if (!empty($userChannelDatas))
