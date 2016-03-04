@@ -24,6 +24,7 @@ $name = Ap_Common_Htmlpurifier::stylePurifier($_POST['name']);
         echo 123123;
         $user_info['unit']=$unit;
         $user_info['major']=$major;
+        echo 1111;
         $user_info['address']=$address;
         $_SESSION['reg_user_info']=$user_info;
 ?>
