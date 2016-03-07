@@ -8,7 +8,7 @@ class AjaxsignupAction extends Ap_Base_Action
         $nickname = isset( $_POST['nickname'] ) ? trim($_POST['nickname']) : '';
         $username = isset( $_POST['username'] ) ? trim($_POST['username']) : '';
         $password = isset( $_POST['password'] ) ? md5("Mooc2013salt".$_POST['password']) : '';
-
+	echo 111111;
         $school = $this->post('school', '');
         $admission = $this->post('admission', '5');
         $telephone = $this->post('telephone', '');
