@@ -1,4 +1,7 @@
 <?php
+echo 111;
+echo 222;
+echo 333;
 /**
  * Created by PhpStorm.
  * User: Xiaot
@@ -16,7 +19,7 @@ class CampuslistAction extends Ap_Base_Action
             header('location: /activity/signup');
             exit();
         }
-
+	echo 444;
         $role_type = intval( Ap_Service_Data_Loginuser::UserRole() );
         if ( !in_array($role_type, array(1,2,3,4) ) ){
             header('location: /activity/signup');
