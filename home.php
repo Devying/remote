@@ -4,7 +4,7 @@ class AjaxsignupAction extends Ap_Base_Action
 {
     function execute()
     {
-
+        echo 123123;
         $nickname = isset( $_POST['nickname'] ) ? trim($_POST['nickname']) : '';
         echo 1111111111;
 
@@ -22,6 +22,7 @@ class AjaxsignupAction extends Ap_Base_Action
         {
             $this->displayJson('', 4, '专业不能为空');
         }
+        echo 22222;
         if (!in_array($admission, array(0,1,2,3,4)))
         {
             $this->displayJson('', 4, '入学时间不合法');

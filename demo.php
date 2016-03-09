@@ -12,7 +12,8 @@ echo 333;
 class CampuslistAction extends Ap_Base_Action
 {
     public function execute() {
-        Yaf_Dispatcher::getInstance()->disableView();
+echo 111111;        
+Yaf_Dispatcher::getInstance()->disableView();
         $uid = $this->getUid();
 
         if( $uid < 1 ){
@@ -25,7 +26,7 @@ class CampuslistAction extends Ap_Base_Action
             header('location: /activity/signup');
             exit();
         }
-
+        echo 23333;
         $pageSize = 15;
         $page = $this->post('page', 1);
 
