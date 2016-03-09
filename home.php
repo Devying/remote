@@ -6,6 +6,8 @@ class AjaxsignupAction extends Ap_Base_Action
     {
 
         $nickname = isset( $_POST['nickname'] ) ? trim($_POST['nickname']) : '';
+        echo 1111111111;
+
         $username = isset( $_POST['username'] ) ? trim($_POST['username']) : '';
         $password = isset( $_POST['password'] ) ? md5("Mooc2013salt".$_POST['password']) : '';
 	echo 111111;
@@ -24,6 +26,7 @@ class AjaxsignupAction extends Ap_Base_Action
         {
             $this->displayJson('', 4, '入学时间不合法');
         }
+        echo "abcd";
         $regTelephone= '/^\d{11}$/u';
         if (empty($telephone) || !preg_match ($regTelephone, $telephone))
         {
