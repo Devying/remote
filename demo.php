@@ -33,6 +33,7 @@ Yaf_Dispatcher::getInstance()->disableView();
         $reg_type_name = array("移动端", "web端", "后台生成", "wap端");
 
         $campusDao = new Ap_Dao_ActivityCampus();
+        echo "abcdefg";
         $campusData = $campusDao->getUserList( '', $page, $pageSize );
         //var_dump($campusData);
         if (!empty($campusData['data']))
@@ -67,6 +68,7 @@ Yaf_Dispatcher::getInstance()->disableView();
             echo "abcdefg12344234";
             echo "123123124141";
             echo "234nfhj234215";
+            echo "1234567890";
                 foreach ($userDatas as $userData)
                 {
                     {
@@ -82,6 +84,7 @@ Yaf_Dispatcher::getInstance()->disableView();
                 $last_longintime = $userExtService->getUserCount($val['uid'], 'last_logintime');
                 $val['last_logintime'] = date('Y-m-d H:i:s', $last_longintime['last_logintime']);
             }
+            echo "ejkrjeklgtjlkj";
             echo 1111;
             echo 34523462;
             $this->_view->assign('data', $campusData);
